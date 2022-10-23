@@ -1,0 +1,18 @@
+{
+    "name": "IVT-S",
+    "version": "0.0.1",
+    "description": "Library for the communication with the Isabellenhuete IVT-S Current Sensor",
+    "keywords": "current, sensor, CAN, IVT-S, Isabellenhuete",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/greyes/IVT-S"
+    },
+    "authors": [
+        {
+            "name": "Gabryel Reyes",
+            "maintainer": true
+        }
+    ],
+    "license": "MIT",
+    "platforms": "espressif32"
+}
