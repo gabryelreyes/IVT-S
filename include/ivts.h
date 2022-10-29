@@ -82,8 +82,6 @@ public:
      */
     ~IVTS();
 
-    bool isIVTSFrame(const uint32_t frameId);
-
     bool processFrame(const CANFrame &frame);
 
     bool getTxFrame(CANFrame *frame);

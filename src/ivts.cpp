@@ -68,31 +68,6 @@ IVTS::~IVTS()
 {
 }
 
-bool IVTS::isIVTSFrame(const uint32_t frameId)
-{
-    bool isValid = false;
-
-    switch (frameId)
-    {
-    case IVT_Msg_Response:
-    case IVT_Msg_Result_I:
-    case IVT_Msg_Result_U1:
-    case IVT_Msg_Result_U2:
-    case IVT_Msg_Result_U3:
-    case IVT_Msg_Result_T:
-    case IVT_Msg_Result_W:
-    case IVT_Msg_Result_As:
-    case IVT_Msg_Result_Wh:
-        isValid = true;
-        break;
-
-    default:
-        break;
-    }
-
-    return isValid;
-}
-
 bool IVTS::processFrame(const CANFrame &frame)
 {
     bool isSuccess = true;
