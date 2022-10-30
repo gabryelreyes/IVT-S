@@ -187,27 +187,6 @@ bool IVTS::processFrame(const CANFrame &frame)
     return isSuccess;
 }
 
-bool IVTS::getTxFrame(CANFrame *frame)
-{
-    bool isFramePending = false;
-
-    if (nullptr != m_txFrameBuffer)
-    {
-        isFramePending = true;
-        frame->m_id = m_txFrameBuffer->m_id;
-        frame->m_extended = m_txFrameBuffer->m_extended;
-        frame->m_rtr = m_txFrameBuffer->m_rtr;
-        frame->m_dlc = m_txFrameBuffer->m_dlc;
-
-        for (uint8_t i = 0; i < m_txFrameBuffer->m_dlc; i++)
-        {
-            frame->m_data[i] = m_txFrameBuffer->m_data[i];
-        }
-    }
-
-    return isFramePending;
-}
-
 int32_t IVTS::getMeasurement(const IVT_Msg measurement) {
     int32_t measuredValue = INT32_MIN;
 

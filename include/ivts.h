@@ -84,11 +84,7 @@ public:
 
     bool processFrame(const CANFrame &frame);
 
-    bool getTxFrame(CANFrame *frame);
-
     int32_t getMeasurement(const IVT_Msg measurement);
-
-    CANFrame *m_txFrameBuffer;
 
 private:
     int32_t m_current;
