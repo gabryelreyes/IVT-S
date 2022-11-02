@@ -1,0 +1,187 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECU IVT
+VAL_TABLE_ MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_TABLE_ IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_TABLE_ Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+
+
+BO_ 1320 IVT_Msg_Result_Wh: 6 IVT
+ SG_ Energy_Counter : 23|32@0- (1,0) [-2147483648|2147483647] "Wh"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1319 IVT_Msg_Result_As: 6 IVT
+ SG_ Current_Counter : 23|32@0- (1,0) [-2147483648|2147483647] "As" Vector__XXX
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] "" Vector__XXX
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1318 IVT_Msg_Result_W: 6 IVT
+ SG_ Power : 23|32@0- (1,0) [-2147483648|2147483647] "W"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1317 IVT_Msg_Result_T: 6 IVT
+ SG_ Temperature : 23|32@0- (0.1,0) [-2147483648|2147483647] "°C"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1316 IVT_Msg_Result_U3: 6 IVT
+ SG_ Voltage : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1315 IVT_Msg_Result_U2: 6 IVT
+ SG_ Voltage : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1314 IVT_Msg_Result_U1: 6 IVT
+ SG_ Voltage : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1313 IVT_Msg_Result_I: 6 IVT
+ SG_ Current : 23|32@0- (1,0) [-2147483648|2147483647] "mA"  ECU
+ SG_ IVT_MsgCount : 8|4@1- (1,0) [-8|7] ""  ECU
+ SG_ MuxID : 0|4@1+ (1,0) [0|15] ""  ECU
+ SG_ IVT_Result_State : 12|4@1+ (1,0) [0|15] ""  ECU
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] ""  ECU
+
+BO_ 1297 IVT_Msg_Response: 8 IVT
+ SG_ Message_MuxByte : 4|4@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1041 IVT_Msg_Command: 8 ECU
+
+
+
+CM_ BU_ ECU "Control Unit";
+CM_ BU_ IVT "Isabellenhütte IVT-S Current Sensor";
+CM_ BO_ 1320 "Energy counter (referring to current and voltage U1)";
+CM_ SG_ 1320 Energy_Counter "Energy counter (referring to current and voltage U1)";
+CM_ SG_ 1320 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1320 MuxID "Result Message Identifier";
+CM_ SG_ 1320 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1320 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1319 "Current counter.";
+CM_ SG_ 1319 Current_Counter "Current counter";
+CM_ SG_ 1319 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1319 MuxID "Result Message Identifier";
+CM_ SG_ 1319 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1319 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1318 "Power (referring to current and voltage U1)";
+CM_ SG_ 1318 Power "Power (referring to current and voltage U1)";
+CM_ SG_ 1318 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1318 MuxID "Result Message Identifier";
+CM_ SG_ 1318 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1318 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1317 "Temperature";
+CM_ SG_ 1317 Temperature "Temperature Measurement";
+CM_ SG_ 1317 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1317 MuxID "Result Message Identifier";
+CM_ SG_ 1317 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1317 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1316 "Voltage 3.";
+CM_ SG_ 1316 Voltage "Voltage Measurement";
+CM_ SG_ 1316 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1316 MuxID "Result Message Identifier";
+CM_ SG_ 1316 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1316 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1315 "Voltage 2.";
+CM_ SG_ 1315 Voltage "Voltage Measurement";
+CM_ SG_ 1315 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1315 MuxID "Result Message Identifier";
+CM_ SG_ 1315 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1315 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1314 "Voltage 1.";
+CM_ SG_ 1314 Voltage "Voltage Measurement";
+CM_ SG_ 1314 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1314 MuxID "Result Message Identifier";
+CM_ SG_ 1314 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1314 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1313 "Current.";
+CM_ SG_ 1313 Current "Current Measurement";
+CM_ SG_ 1313 IVT_MsgCount "Cyclic counter individually for each channel";
+CM_ SG_ 1313 MuxID "Result Message Identifier";
+CM_ SG_ 1313 IVT_Result_State "State Bits. 0x0 is OK. Other than that is Error. Check Datasheet for more information.";
+CM_ SG_ 1313 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1297 "Response to SET and GET command messages.
+A response-ID-byte is included for identification.";
+CM_ SG_ 1297 Message_MuxByte "MuxByte Identifier";
+CM_ BO_ 1041 "Function commands, SET and GET commands.
+A command-ID-byte is included for identification.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 1320 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1320 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1320 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1319 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1319 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1319 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1318 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1318 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1318 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1317 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1317 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1317 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1316 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1316 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1316 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1315 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1315 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1315 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1314 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1314 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1314 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1313 MuxID 7 "IVT_Msg_Result_Wh" 6 "IVT_Msg_Result_As" 5 "VT_Msg_Result_W" 4 "IVT_Msg_Result_T" 3 "IVT_Msg_Result_U3 " 2 "IVT_Msg_Result_U2" 1 "IVT_Msg_Result_U1" 0 "IVT_Msg_Result_I" ;
+VAL_ 1313 IVT_Result_State 15 "Error Present" 14 "Error Present" 13 "Error Present" 12 "Error Present" 11 "Error Present" 10 "Error Present" 9 "Error Present" 8 "Error Present" 7 "Error Present" 6 "Error Present" 5 "Error Present" 4 "Error Present" 3 "Error Present" 2 "Error Present" 1 "Error Present" 0 "No Error" ;
+VAL_ 1313 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+VAL_ 1297 Message_MuxByte 15 "Response on not allowed message" 11 "Responses on Set and Get Cmds" 10 "Responses on Config Result" 9 "Responses on CAN ID" 8 "Response on error/log data" 7 "Get commands" 6 "Get config result" 5 "Get CAN ID" 4 "Get error/log data" 3 "Set commands" 2 "Set config result" 1 "Set CAN ID" 0 "Results (measured or calculated)" ;
+
