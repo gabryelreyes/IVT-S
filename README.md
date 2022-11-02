@@ -5,6 +5,7 @@ The objective of this library is to implement the communication used by the [IVT
 - [Overview](#overview)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Documentation](#documentation)
 - [Issues, Ideas And Bugs](#issues-ideas-and-bugs)
 - [License](#license)
 - [Contribution](#contribution)
@@ -74,6 +75,8 @@ void some_can_frame_received_callback(int canId, bool isExtended, bool isRtr, in
 }
 
 ```
+## Documentation
+In-depth documentation can be found [here](./Documentation/)
 
 ## Issues, Ideas And Bugs
 If you have further ideas or you found some bugs, great! Create a [issue](https://github.com/BlueAndi/esp-rgb-led-matrix/issues) or if you are able and willing to fix it by yourself, clone the repository and create a pull request.
